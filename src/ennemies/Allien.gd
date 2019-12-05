@@ -23,7 +23,7 @@ func _physics_process(delta):
 		look_at(playerPos)
 		velocity = posToMove.normalized() * mouvementSpeed
 		move_and_collide(velocity*delta)
-		$Weapon.shot(playerPos)
+		$Weapon.shot(playerPos, rotation_degrees)
 	
 
 	if pv <= 0:

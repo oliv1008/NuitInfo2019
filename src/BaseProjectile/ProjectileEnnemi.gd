@@ -4,6 +4,7 @@ var velocity
 var shooter
 var damage
 var playerPos
+var angle
 export (int) var speed
 
 # Called when the node enters the scene tree for the first time.
@@ -11,8 +12,8 @@ func _ready():
 	print("BITASSE")
 	print("shooter = ", shooter)
 	var shooterPos = shooter.position
-	#rotation_degrees = angle + 90
-	var targetPos = playerPos.normalized()
+	rotation_degrees = angle + 90
+	var targetPos = (- shooterPos + playerPos).normalized()
 	print(targetPos)
 	
 	velocity = targetPos * speed 
