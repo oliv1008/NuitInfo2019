@@ -3,7 +3,7 @@ extends KinematicBody2D
 var velocity
 var shooter
 var damage
-var angle
+var playerPos
 export (int) var speed
 
 # Called when the node enters the scene tree for the first time.
@@ -11,12 +11,8 @@ func _ready():
 	print("BITASSE")
 	print("shooter = ", shooter)
 	var shooterPos = shooter.position
-	var targetPos_x = (shooterPos.x * cos(deg2rad(angle)))
-	var targetPos_y = (shooterPos.y * sin(deg2rad(angle)))
-	rotation_degrees = angle + 90
-	var targetPos = (Vector2(targetPos_x, targetPos_y)).normalized()
-	var direction = targetPos.angle()
-	print(angle)
+	#rotation_degrees = angle + 90
+	var targetPos = playerPos.normalized()
 	print(targetPos)
 	
 	velocity = targetPos * speed 
@@ -27,7 +23,7 @@ func _process(delta):
 	if collisionData != null:
 		if collisionData.collider.get_class() == "KinematicBody2D":
 			if collisionData.collider.has_method("get_hit"):
-				collisionData.collider.get_hit(damage)
+				collisionData.collider.get_hit()
 				visible = false
 				queue_free()
 		else:

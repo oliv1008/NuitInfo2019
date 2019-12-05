@@ -17,12 +17,12 @@ func _ready():
 func _process(delta):
 	pass
 
-func shot(angle):
+func shot(playerPos):
 	if (canShot):
 		var projectileInstance = projectile.instance()
-		projectileInstance.angle = angle
 		projectileInstance.damage = 10 * damageMultiplier
 		projectileInstance.shooter = holder
+		projectileInstance.playerPos = playerPos
 		print("self = ", self)
 		print("holder = ", holder)
 		projectileInstance.position = global_position

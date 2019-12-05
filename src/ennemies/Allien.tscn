@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/ennemies/Allien.gd" type="Script" id=1]
+[ext_resource path="res://src/assets/images/Vaisseau2_16.png" type="Texture" id=2]
+[ext_resource path="res://src/Weapon/EnnemyWeapon.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 7.43137
+
+[node name="Node2D" type="KinematicBody2D"]
+collision_layer = 8
+collision_mask = 3
+script = ExtResource( 1 )
+pv = 500
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = -1.5708
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.355492, 0.0394993 )
+shape = SubResource( 1 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 7.42583, 0.0394993 )
+
+[node name="Weapon" parent="." instance=ExtResource( 3 )]
