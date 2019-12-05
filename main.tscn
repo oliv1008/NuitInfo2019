@@ -6,3 +6,4 @@
 
 [node name="PlayerShip" parent="." instance=ExtResource( 1 )]
 position = Vector2( 96.4745, 37.5053 )
+collision_mask = 12
