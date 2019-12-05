@@ -1,16 +1,18 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/ennemies/rock/Rock.gd" type="Script" id=1]
+[ext_resource path="res://src/assets/images/rocher16a.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.02698, 7.85759 )
 
 [node name="Rock" type="Node2D"]
+
+[node name="RockBody" type="KinematicBody2D" parent="."]
 script = ExtResource( 1 )
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RockBody"]
+shape = SubResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-
-[node name="Sprite" type="Sprite" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 48.0
-margin_bottom = 48.0
+[node name="Sprite" type="Sprite" parent="RockBody"]
+texture = ExtResource( 2 )
