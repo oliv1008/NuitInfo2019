@@ -12,7 +12,7 @@
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 9.12163, 7.81643 )
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
@@ -79,11 +79,12 @@ damageMultiplier = 5.0
 rateOfFire = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -1.34553, -0.0178565 )
 rotation = 1.5708
+
 frames = SubResource( 1 )
 animation = "iddle"
 
