@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HandgunIncrementalScreen.png-33cc3ff6076caaea9e2c8e9533fe7e2a.stex"
+path="res://.import/Explosion_4.png-32396b84a51a5e324ac3377b5b5d9d77.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Handgun/HandgunIncrementalScreen.png"
-dest_files=[ "res://.import/HandgunIncrementalScreen.png-33cc3ff6076caaea9e2c8e9533fe7e2a.stex" ]
+source_file="res://src/assets/images/Explosion_4.png"
+dest_files=[ "res://.import/Explosion_4.png-32396b84a51a5e324ac3377b5b5d9d77.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

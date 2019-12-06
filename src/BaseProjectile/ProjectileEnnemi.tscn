@@ -1,17 +1,16 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://src/BaseProjectile/BaseProjectile.gd" type="Script" id=1]
-[ext_resource path="res://src/assets/images/Tir2.png" type="Texture" id=2]
+[ext_resource path="res://src/BaseProjectile/ProjectileEnnemi.gd" type="Script" id=1]
+[ext_resource path="res://src/assets/images/Tir.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 0.153513, 0.0379293 )
+extents = Vector2( 0.147635, 0.0381967 )
 
 [node name="BaseProjectile" type="KinematicBody2D"]
 scale = Vector2( 20, 20 )
-collision_layer = 2
-collision_mask = 8
+collision_layer = 4
 script = ExtResource( 1 )
-speed = 1600
+speed = 100
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.00765705, 0.00853117 )
@@ -21,4 +20,5 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.00738316, 0.00696678 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
