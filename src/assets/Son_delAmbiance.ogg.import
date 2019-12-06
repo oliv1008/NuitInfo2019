@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Son_delAmbiance.ogg-8561ab8f1f6fd7ac35ae100d6f943cb4.oggstr"
+
+[deps]
+
+source_file="res://src/assets/Son_delAmbiance.ogg"
+dest_files=[ "res://.import/Son_delAmbiance.ogg-8561ab8f1f6fd7ac35ae100d6f943cb4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

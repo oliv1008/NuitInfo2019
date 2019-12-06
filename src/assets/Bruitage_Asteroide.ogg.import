@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Bruitage_Asteroide.ogg-b50f96d5a79a77492c3a8837c012bae1.oggstr"
+
+[deps]
+
+source_file="res://src/assets/Bruitage_Asteroide.ogg"
+dest_files=[ "res://.import/Bruitage_Asteroide.ogg-b50f96d5a79a77492c3a8837c012bae1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

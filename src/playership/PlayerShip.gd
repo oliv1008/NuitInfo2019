@@ -40,13 +40,14 @@ func _process(delta):
 	position.x = wrapf(position.x, -8, screen_size.x + 8)
 	position.y = wrapf(position.y, -8, screen_size.y + 8)
 	
-	if Input.is_mouse_button_pressed(BUTTON_LEFT) && can_shoot == true:
+	if Input.is_action_pressed("shoot") && can_shoot == true:
 		can_shoot = false
 		shot(movedir)
 		$Timer.start()
 		
 func get_hit():
 	queue_free()
+	get_tree().change_scene("res://src/Main/GameOver.tscn")
 	
 func shot(movedir):
 	var bullet_instance = BulletScene.instance()

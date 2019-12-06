@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Main/StartScreen.gd" type="Script" id=1]
+[ext_resource path="res://src/assets/images/Fond.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Cave-Story.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Cave-Story.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = SubResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+
+[node name="Press" type="Label" parent="."]
+margin_left = 34.0811
+margin_top = -29.5369
+margin_right = 577.081
+margin_bottom = 226.463
+custom_fonts/font = SubResource( 2 )
+text = "APPUYEZ SUR ESPACE POUR LANCER LE JEU"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="control" type="Label" parent="."]
+margin_left = 174.624
+margin_top = 319.95
+margin_right = 476.624
+margin_bottom = 385.95
+custom_fonts/font = SubResource( 4 )
+text = "Q et D : Touner le vaisseau
+Z : Avancer
+Espace : Tirer"

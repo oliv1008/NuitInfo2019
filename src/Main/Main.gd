@@ -14,6 +14,7 @@ onready var screen_size = get_viewport().get_visible_rect().size
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	SoundManager.get_node("AudioStreamPlayer").play()
 	singleton.MainScreen = self
 	add_score(0)
 
@@ -23,26 +24,27 @@ func _physics_process(delta):
 	var rand_rock_difficulty = inverse_lerp(0, 150, total_time)
 	var rand_rock = lerp(1, 4, rand_rock_difficulty)
 	var rand_range_rock = rand_range(0, 1)
-	if (rand_range_rock < 0.001 * rand_rock):
+	if (rand_range_rock < 0.004 * rand_rock):
 		spawn_rock()
 		
 	###### ALIEN ######
-	var rand_alien_difficulty = inverse_lerp(0, 150, total_time)
+	var rand_alien_difficulty = inverse_lerp(0, 90, total_time)
 	var rand_alien = lerp(1, 4, rand_alien_difficulty)
 	var rand_range_alien = rand_range(0, 1)
-	if (rand_range_alien < 0.0003 * rand_alien) && total_time >= 50 || (alien_one_shot == false && total_time >= 50):
+	if (rand_range_alien < 0.002 * rand_alien) && total_time >= 30 || (alien_one_shot == false && total_time >= 30):
 		alien_one_shot = true
 		spawn_alien()
 	###### TROU NOIR ######
 	var rand_BH_difficulty = inverse_lerp(0, 150, total_time)
 	var rand_BH = lerp(1, 4, rand_BH_difficulty)
 	var rand_range_BH = rand_range(0, 1)
-	if (rand_range_BH < 0.0002 * rand_BH) && total_time >= 90 || (BH_one_shot == false && total_time >= 90):
+	if (rand_range_BH < 0.0013 * rand_BH) && total_time >= 70 || (BH_one_shot == false && total_time >= 70):
 		BH_one_shot = true
 		spawn_BH()
 
 func add_score(score_to_add):
 	score += score_to_add
+	singleton.score = score
 	label.text = "Score = " + String(score)
 	
 func spawn_rock():
@@ -52,10 +54,10 @@ func spawn_rock():
 		taille = 0
 	elif taille_rand >= 30 && taille_rand < 60:
 		taille = 1
-	elif taille_rand >= 60:
+	elif taille_rand >= 50:
 		taille = 2
 			
-	var movement_speed_difficulty = inverse_lerp(0, 150, total_time)
+	var movement_speed_difficulty = inverse_lerp(0, 100, total_time)
 
 	var movement_speed = lerp(60, 100, movement_speed_difficulty)
 	movement_speed += rand_range(-20, 0)
@@ -78,15 +80,15 @@ func _on_Timer_timeout():
 
 
 func _on_Timer10_timeout():
-	if total_time > 40 && total_time <= 60:
+	if total_time > 30 && total_time <= 60:
 		spawn_rock()
 
 
 func _on_Timer5_timeout():
-	if total_time <= 40:
+	if total_time <= 30:
 		spawn_rock()
 
 
 func _on_Timer3_timeout():
-	if total_time <= 30:
+	if total_time <= 25:
 		spawn_rock()

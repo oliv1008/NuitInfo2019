@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Bruitage_Trou noir.ogg-4de4b2873dae5a7d33fee105e4fbae25.oggstr"
+
+[deps]
+
+source_file="res://src/assets/Bruitage_Trou noir.ogg"
+dest_files=[ "res://.import/Bruitage_Trou noir.ogg-4de4b2873dae5a7d33fee105e4fbae25.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
