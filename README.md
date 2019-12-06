@@ -1,4 +1,7 @@
 # NuitInfo2019
+
+Jeu jouable à : https://oliv1008.itch.io/nuitinfo2019
+
 Equipe :
 
 Friot Alcide : Création des assets graphiques
